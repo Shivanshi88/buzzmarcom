@@ -111,17 +111,17 @@ const Contact = () => {
               <InfoCard
                 icon={Mail}
                 title="Email"
-                lines={['hello@buzzmarcom.com', 'support@buzzmarcom.com']}
+                lines={['Info@buzzmarcom.com', 'Ghanshyam@buzzmarcom.com']}
               />
               <InfoCard
                 icon={Phone}
                 title="Phone / WhatsApp"
-                lines={['+91-98765-43210', '+91-98765-43211']}
+                lines={['+91 - 987786 8445']}
               />
               <InfoCard
                 icon={MapPin}
                 title="Office"
-                lines={['Patna / Delhi NCR', 'India']}
+                lines={['A91-, Dwarka Mor', 'New Delhi, India']}
               />
               <InfoCard
                 icon={Clock}

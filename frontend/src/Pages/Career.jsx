@@ -78,7 +78,7 @@ const Career = () => {
             <Button
               className="bg-amber-500 hover:bg-amber-600 text-gray-900 text-xs md:text-sm font-semibold px-5 py-2 rounded-lg shadow-md hover:shadow-lg transition-all duration-300"
               onClick={() => {
-                window.location.href = 'mailto:careers@buzzmarcom.com';
+                window.location.href = 'mailto:Info@buzzmarcom.com';
               }}
             >
               Email your resume

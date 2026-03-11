@@ -122,17 +122,22 @@ const Footer = () => {
           <div className="space-y-5 text-sm">
             <div className="flex items-start gap-3">
               <MapPin className="text-[#0f2a3a] mt-1" size={18} />
-              <p>Mumbai, Maharashtra, India</p>
+              <p>A91-, Dwarka Mor, New Delhi, India</p>
             </div>
 
             <div className="flex items-center gap-3">
               <Phone className="text-[#0f2a3a]" size={18} />
-              <p>+91 123 456 7890</p>
+              <p>+91 - 987786 8445</p>
             </div>
 
             <div className="flex items-center gap-3">
               <Mail className="text-[#0f2a3a]" size={18} />
-              <p>info@buzzmarcom.com</p>
+              <p>Info@buzzmarcom.com</p>
+            </div>
+
+            <div className="flex items-center gap-3">
+              <Mail className="text-[#0f2a3a]" size={18} />
+              <p>Ghanshyam@buzzmarcom.com</p>
             </div>
           </div>
         </div>
