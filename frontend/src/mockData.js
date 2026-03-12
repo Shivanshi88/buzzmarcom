@@ -27,7 +27,6 @@ export const navigationItems = [
     hasDropdown: true,
     dropdownItems: [
         { label: 'Blog', path: '/insights/blogs' },
-        { label: 'Case Studies', path: '/insights/case-studies' },
     ],
 },
    {

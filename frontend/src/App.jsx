@@ -10,7 +10,6 @@ import Team from "./Pages/Team";
 import Career from "./Pages/Career";
 import Contact from "./Pages/Contact";
 import Blogs from "./Pages/Blogs";
-import CaseStudies from "./Pages/CaseStudies";
 
 // Service detail pages
 import SocialResearchServices from "./Pages/Services/SocialResearchServices";
@@ -50,7 +49,6 @@ const AppContent = () => {
 
           {/* Insights */}
           <Route path="/insights/blogs" element={<Blogs />} />
-          <Route path="/insights/case-studies" element={<CaseStudies />} />
 
           {/* Blog detail */}
           <Route path="/blog/:slug" element={<BlogDetail />} />

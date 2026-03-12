@@ -22,7 +22,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 bg-yellow-500 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 bg-yellow-400/95 backdrop-blur-md border-b border-yellow-300 ${
         isScrolled
           ? "shadow-md"
           : ""
@@ -38,18 +38,18 @@ const Navbar = () => {
               className="h-16 w-auto object-contain scale-110"
             />
           </Link>
-
+ 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-8">
             {navigationItems.map((item) => {
               if (item.hasDropdown && item.dropdownItems) {
                 return (
                   <div key={item.label} className="relative group">
-                    <button className="flex items-center gap-1 text-white hover:text-gray-900 font-medium transition">
+                    <button className="flex items-center gap-1 text-gray-800 hover:text-yellow-700 font-medium transition">
                       {item.label}
                       <ChevronDown className="w-4 h-4" />
                     </button>
-
+ 
                     {/* Dropdown */}
                     <div className="absolute left-0 top-full mt-1 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 bg-white shadow-xl rounded-xl w-64 border border-gray-100">
                       <div className="py-2">
@@ -57,7 +57,7 @@ const Navbar = () => {
                           <Link
                             key={dropItem.label}
                             to={dropItem.path}
-                            className="block px-5 py-3 text-sm text-gray-700 hover:bg-yellow-50 hover:text-yellow-600 transition"
+                            className="block px-5 py-3 text-sm text-gray-700 hover:bg-yellow-100 hover:text-yellow-700 transition"
                           >
                             {dropItem.label}
                           </Link>
@@ -67,34 +67,34 @@ const Navbar = () => {
                   </div>
                 );
               }
-
+ 
               return (
                 <Link
                   key={item.label}
                   to={item.path}
-                  className="text-white hover:text-gray-900 font-medium transition"
+                  className="text-gray-800 hover:text-yellow-700 font-medium transition"
                 >
                   {item.label}
                 </Link>
               );
             })}
           </div>
-
+ 
           {/* CTA Button (desktop) */}
           <div className="hidden md:block">
             <Button
-              className="relative overflow-hidden bg-gray-900 text-white font-semibold px-6 py-2 rounded-lg
-                         transition-all duration-300 hover:bg-yellow-400 hover:text-gray-900
+              className="relative overflow-hidden bg-[#0f2a3a] text-white font-semibold px-6 py-2 rounded-lg
+                         transition-all duration-300 hover:bg-yellow-500
                          hover:shadow-lg hover:-translate-y-0.5"
               onClick={() => navigate("/contact")}
             >
               <span className="relative z-10">Get Started</span>
             </Button>
           </div>
-
+ 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-white"
+            className="md:hidden text-gray-800 hover:text-yellow-700"
             onClick={() => setMobileOpen(!mobileOpen)}
           >
             {mobileOpen ? <X size={28} /> : <Menu size={28} />}
