@@ -15,6 +15,7 @@ import Logo6 from "../assets/client-logos/Zomato.png";
 
 const TrustedBySection = () => {
   const settings = {
+    arrows: false,
     dots: false,
     infinite: true,
     speed: 900,

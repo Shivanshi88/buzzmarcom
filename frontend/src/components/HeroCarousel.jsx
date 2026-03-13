@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { heroSlides } from '../mockData';
 import { Button } from './ui/button';
 
@@ -64,22 +63,6 @@ const HeroCarousel = () => {
                     </div>
                 </div>
             ))}
-
-            {/* Navigation Arrows */}
-            <button
-                onClick={prevSlide}
-                className="absolute left-6 top-1/2 -translate-y-1/2 text-white hover:text-yellow-500 transition-colors z-10"
-                aria-label="Previous slide"
-            >
-                <ChevronLeft className="w-12 h-12" />
-            </button>
-            <button
-                onClick={nextSlide}
-                className="absolute right-6 top-1/2 -translate-y-1/2 text-white hover:text-yellow-500 transition-colors z-10"
-                aria-label="Next slide"
-            >
-                <ChevronRight className="w-12 h-12" />
-            </button>
 
             {/* Slide Indicators */}
             <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex space-x-2 z-10">
