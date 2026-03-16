@@ -5,8 +5,8 @@ import {
   Mail,
   Linkedin,
   Twitter,
-  Facebook,
   UserRound,
+  Instagram 
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import BuzzLogo from "../assets/Buzz.png";
@@ -31,7 +31,7 @@ const Footer = () => {
           {/* Social Icons */}
           <div className="flex space-x-4">
             <a
-              href="#"
+              href="https://www.linkedin.com/company/buzzmarcom/"
               target="_blank"
               rel="noopener noreferrer"
               className="p-3 bg-[#0f2a3a] text-white rounded-lg hover:bg-yellow-500 hover:text-[#0f2a3a] transition"
@@ -40,7 +40,7 @@ const Footer = () => {
             </a>
 
             <a
-              href="#"
+              href="https://x.com/buzzmarcomsol"
               target="_blank"
               rel="noopener noreferrer"
               className="p-3 bg-[#0f2a3a] text-white rounded-lg hover:bg-yellow-500 hover:text-[#0f2a3a] transition"
@@ -49,12 +49,12 @@ const Footer = () => {
             </a>
 
             <a
-              href="#"
+              href="https://www.instagram.com/buzzmarcom"
               target="_blank"
               rel="noopener noreferrer"
               className="p-3 bg-[#0f2a3a] text-white rounded-lg hover:bg-yellow-500 hover:text-[#0f2a3a] transition"
             >
-              <Facebook size={18} />
+            <Instagram  size={18} />
             </a>
           </div>
         </div>
@@ -140,12 +140,12 @@ const Footer = () => {
         <p>© 2025 Buzzmarcom Solutions LLP. All rights reserved.</p>
 
         <div className="flex items-center gap-6 mt-3 md:mt-0">
-          <a href="#" className="hover:text-yellow-500 transition">
+          <Link to="/privacy-policy" className="hover:text-yellow-500 transition">
             Privacy Policy
-          </a>
-          <a href="#" className="hover:text-yellow-500 transition">
+          </Link>
+          <Link to="/terms-of-service" className="hover:text-yellow-500 transition">
             Terms of Service
-          </a>
+          </Link>
 
           {/* Admin icon at the corner */}
           <Link

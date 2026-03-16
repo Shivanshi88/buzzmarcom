@@ -18,6 +18,7 @@ const AdminLayout = () => {
     { label: 'Dashboard', path: '/admin' },
     { label: 'Blogs', path: '/admin/blogs' },
     { label: 'Enquiries', path: '/admin/enquiries' },
+    { label: 'Jobs', path: '/admin/jobs' },
   ];
 
   const handleLogout = () => {
