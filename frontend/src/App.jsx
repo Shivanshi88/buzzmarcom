@@ -22,7 +22,7 @@ import ManpowerSupportServices from "./Pages/Services/ManpowerSupportServices";
 import BlogDetail from "./Pages/BlogDetail";
 import AdminBlogs from "./Pages/AdminBlogs";
 import AdminEnquiries from "./Pages/AdminEnquiries";
-import AdminJobs from "./Pages/AdminJobs";
+
 import AdminLayout from "./Pages/AdminLayout";
 import AdminDashboard from "./Pages/AdminDashboard";
 import AdminLogin from "./Pages/AdminLogin";
@@ -88,7 +88,7 @@ const AppContent = () => {
             <Route index element={<AdminDashboard />} />
             <Route path="blogs" element={<AdminBlogs />} />
             <Route path="enquiries" element={<AdminEnquiries />} />
-            <Route path="jobs" element={<AdminJobs />} />
+       
           </Route>
         </Routes>
       </main>
