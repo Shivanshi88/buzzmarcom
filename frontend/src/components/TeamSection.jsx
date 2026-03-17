@@ -57,18 +57,19 @@ const TeamSection = () => {
           {teamMembers.map((member) => (
             <motion.div key={member.id} variants={cardVariants}>
               <Card className="overflow-hidden border border-amber-100 bg-white/95 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 group">
-                {/* Image */}
-                <div className="h-56 sm:h-64 w-full overflow-hidden relative">
-                  <img
-                    src={member.image}
-                    alt={member.name}
-                    className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-black/0 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                {/* Image Avatar */}
+                <div className="flex justify-center pt-8">
+                  <div className="w-40 h-40 rounded-full overflow-hidden border-4 border-amber-100 shadow-lg group-hover:border-amber-200 transition-colors duration-300">
+                    <img
+                      src={member.image}
+                      alt={member.name}
+                      className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-110"
+                    />
+                  </div>
                 </div>
 
                 {/* Content */}
-                <CardContent className="p-6 space-y-4">
+                <CardContent className="p-6 space-y-4 text-center">
                   <div>
                     <h3 className="text-xl font-bold text-gray-900 mb-1">
                       {member.name}

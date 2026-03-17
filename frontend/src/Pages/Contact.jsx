@@ -1,5 +1,6 @@
 // src/Pages/Contact.jsx
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, Clock } from 'lucide-react';
 import { Button } from '../components/ui/button';
@@ -15,6 +16,14 @@ const Contact = () => {
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState('');
   const [error, setError] = useState('');
+  const location = useLocation();
+
+  useEffect(() => {
+    const params = new URLSearchParams(location.search);
+    if (params.get('type') === 'career') {
+      setForm((prev) => ({ ...prev, service: 'Join our team / Job Application' }));
+    }
+  }, [location]);
 
   const handleChange = (e) => {
     setForm({
@@ -196,6 +205,7 @@ const Contact = () => {
                     <option>Branding & Advertisement</option>
                     <option>IT Solutions</option>
                     <option>Manpower Support</option>
+                    <option>Join our team / Job Application</option>
                     <option>Other</option>
                   </select>
                 </Field>

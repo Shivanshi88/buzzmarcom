@@ -20,13 +20,14 @@ import ITSolutionsServices from "./Pages/Services/ITSolutionsServices";
 import ManpowerSupportServices from "./Pages/Services/ManpowerSupportServices";
 
 import BlogDetail from "./Pages/BlogDetail";
-
-// Admin panel pages
 import AdminBlogs from "./Pages/AdminBlogs";
 import AdminEnquiries from "./Pages/AdminEnquiries";
+
 import AdminLayout from "./Pages/AdminLayout";
 import AdminDashboard from "./Pages/AdminDashboard";
 import AdminLogin from "./Pages/AdminLogin";
+import PrivacyPolicy from "./Pages/PrivacyPolicy";
+import TermsOfService from "./Pages/TermsOfService";
 
 import "./App.css";
 
@@ -46,6 +47,8 @@ const AppContent = () => {
           <Route path="/team" element={<Team />} />
           <Route path="/career" element={<Career />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/terms-of-service" element={<TermsOfService />} />
 
           {/* Insights */}
           <Route path="/insights/blogs" element={<Blogs />} />
@@ -85,6 +88,7 @@ const AppContent = () => {
             <Route index element={<AdminDashboard />} />
             <Route path="blogs" element={<AdminBlogs />} />
             <Route path="enquiries" element={<AdminEnquiries />} />
+
           </Route>
         </Routes>
       </main>

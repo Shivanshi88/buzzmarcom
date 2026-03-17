@@ -33,19 +33,11 @@ const TrustedBySection = () => {
     ],
   };
 
-  const logoImages = [
-    Logo1,
-    Logo2,
-    Logo3,
-    Logo4,
-    Logo5,
-    Logo6,
-  ];
+  const logoImages = [Logo1, Logo2, Logo3, Logo4, Logo5, Logo6];
 
   return (
     <section className="py-14 bg-gradient-to-b from-white via-amber-50/20 to-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
-
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 25 }}
@@ -88,22 +80,19 @@ const TrustedBySection = () => {
                   transition={{ duration: 0.25 }}
                   className="group flex items-center justify-center h-28 sm:h-32"
                 >
-                  <div className="flex h-full w-full items-center justify-center rounded-xl bg-amber-50/60 border border-amber-100 grayscale group-hover:grayscale-0 opacity-70 group-hover:opacity-100 transition-all duration-300">
-                    
+                  <div className="flex h-full w-full items-center justify-center rounded-xl bg-amber-50/60 border border-amber-100 opacity-70 group-hover:opacity-100 transition-all duration-300">
                     <img
                       src={logoImages[index % logoImages.length]}
                       alt={`${logo.name} logo`}
                       className="w-44 h-16 sm:w-52 sm:h-20 md:w-60 md:h-24 object-contain"
                       loading="lazy"
                     />
-
                   </div>
                 </motion.div>
               </div>
             ))}
           </Slider>
         </motion.div>
-
       </div>
     </section>
   );

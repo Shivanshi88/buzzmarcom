@@ -18,6 +18,7 @@ const AdminLayout = () => {
     { label: 'Dashboard', path: '/admin' },
     { label: 'Blogs', path: '/admin/blogs' },
     { label: 'Enquiries', path: '/admin/enquiries' },
+    // { label: 'Jobs', path: '/admin/jobs' },
   ];
 
   const handleLogout = () => {
@@ -43,11 +44,10 @@ const AdminLayout = () => {
               <Link
                 key={item.path}
                 to={item.path}
-                className={`flex items-center px-3 py-2 text-xs rounded-md transition ${
-                  active
+                className={`flex items-center px-3 py-2 text-xs rounded-md transition ${active
                     ? 'bg-amber-500 text-gray-900'
                     : 'text-gray-300 hover:bg-gray-800 hover:text-white'
-                }`}
+                  }`}
               >
                 {item.label}
               </Link>

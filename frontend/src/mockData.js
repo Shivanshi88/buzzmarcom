@@ -1,6 +1,6 @@
 // Mock data for Buzzmarcom clone
-import Ghan from "./assets/Ghan.jpg";
-import Abhilasha from "./assets/Abhilasha.jpg";
+import Ghan from "./assets/Ghan.jpeg";
+import Abhilasha from "./assets/Abhilasha.jpeg";
 
 export const navigationItems = [
     { label: 'Home', path: '/' },

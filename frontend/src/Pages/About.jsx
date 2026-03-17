@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
-import Abhilasha from "../assets/Abhilasha.jpg";
-import Ghan from "../assets/Ghan.jpg";
+import Abhilasha from "../assets/Abhilasha.jpeg";
+import Ghan from "../assets/Ghan.jpeg";
 
 const AboutUs = () => {
   return (
@@ -151,25 +151,25 @@ const AboutUs = () => {
                 y: -6,
                 boxShadow: "0 20px 40px rgba(15, 23, 42, 0.12)",
               }}
-              className="bg-white rounded-2xl shadow-md p-8 hover:shadow-xl transition-all duration-300"
+              className="bg-white rounded-2xl shadow-md p-8 hover:shadow-xl transition-all duration-300 flex flex-col items-center text-center"
             >
-              <div className="flex items-center gap-5 mb-5">
+              <div className="mb-6">
                 <img
                   src={Ghan}
                   alt="Ghan Shyam Jha"
-                  className="w-20 h-20 rounded-full object-cover"
+                  className="w-44 h-44 rounded-full object-cover object-center border-4 border-yellow-200 shadow-lg"
                 />
-                <div>
-                  <h4 className="text-xl font-semibold text-gray-900">
-                    Ghan Shyam Jha
-                  </h4>
-                  <p className="text-yellow-600 text-sm font-medium">
-                    Lead Consultant – Strategy & Compliance
-                  </p>
-                  <p className="text-gray-500 text-xs mt-1">
-                    11 Years in Technical Marketing & Law
-                  </p>
-                </div>
+              </div>
+              <div className="mb-5">
+                <h4 className="text-2xl font-bold text-gray-900">
+                  Ghan Shyam Jha
+                </h4>
+                <p className="text-yellow-600 font-semibold mb-1">
+                  Lead Consultant – Strategy & Compliance
+                </p>
+                <p className="text-gray-500 text-sm">
+                  11 Years in Technical Marketing & Law
+                </p>
               </div>
 
               <p className="text-gray-600 text-sm mb-3">
@@ -200,25 +200,25 @@ const AboutUs = () => {
                 y: -6,
                 boxShadow: "0 20px 40px rgba(15, 23, 42, 0.12)",
               }}
-              className="bg-white rounded-2xl shadow-md p-8 hover:shadow-xl transition-all duration-300"
+              className="bg-white rounded-2xl shadow-md p-8 hover:shadow-xl transition-all duration-300 flex flex-col items-center text-center"
             >
-              <div className="flex items-center gap-5 mb-5">
+              <div className="mb-6">
                 <img
                   src={Abhilasha}
                   alt="Abhilasha Jha"
-                  className="w-20 h-20 rounded-full object-cover"
+                  className="w-44 h-44 rounded-full object-cover object-center border-4 border-yellow-200 shadow-lg"
                 />
-                <div>
-                  <h4 className="text-xl font-semibold text-gray-900">
-                    Abhilasha Jha
-                  </h4>
-                  <p className="text-yellow-600 text-sm font-medium">
-                    Content Strategist & Communications Specialist
-                  </p>
-                  <p className="text-gray-500 text-xs mt-1">
-                    4 Years in Content Strategy & Copywriting
-                  </p>
-                </div>
+              </div>
+              <div className="mb-5">
+                <h4 className="text-2xl font-bold text-gray-900">
+                  Abhilasha Jha
+                </h4>
+                <p className="text-yellow-600 font-semibold mb-1">
+                  Content Strategist & Communications Specialist
+                </p>
+                <p className="text-gray-500 text-sm">
+                  4 Years in Content Strategy & Copywriting
+                </p>
               </div>
 
               <p className="text-gray-600 text-sm mb-3">
