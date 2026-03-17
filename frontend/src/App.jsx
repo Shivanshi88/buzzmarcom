@@ -88,7 +88,7 @@ const AppContent = () => {
             <Route index element={<AdminDashboard />} />
             <Route path="blogs" element={<AdminBlogs />} />
             <Route path="enquiries" element={<AdminEnquiries />} />
-       
+
           </Route>
         </Routes>
       </main>

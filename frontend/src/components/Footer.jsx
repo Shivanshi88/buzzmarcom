@@ -148,13 +148,15 @@ const Footer = () => {
           </Link>
 
           {/* Admin icon at the corner */}
-          <Link
-            to="/admin/login"
+          <a
+            href="/admin/login"
+            target="_blank"
+            rel="noopener noreferrer"
             className="p-2 rounded-full bg-[#0f2a3a] text-white hover:bg-yellow-500 hover:text-[#0f2a3a] transition"
             aria-label="Admin login"
           >
             <UserRound size={18} />
-          </Link>
+          </a>
         </div>
       </div>
     </footer>
