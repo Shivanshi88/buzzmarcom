@@ -6,7 +6,7 @@ import {
   Linkedin,
   Twitter,
   UserRound,
-  Instagram 
+  Instagram
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import BuzzLogo from "../assets/Buzz.png";
@@ -15,6 +15,7 @@ const Footer = () => {
   return (
     <footer className="bg-gray-100 text-gray-800 pt-16 pb-8">
       <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-12">
+
         {/* Logo + About */}
         <div>
           <img
@@ -54,7 +55,7 @@ const Footer = () => {
               rel="noopener noreferrer"
               className="p-3 bg-[#0f2a3a] text-white rounded-lg hover:bg-yellow-500 hover:text-[#0f2a3a] transition"
             >
-            <Instagram  size={18} />
+              <Instagram size={18} />
             </a>
           </div>
         </div>
@@ -96,12 +97,71 @@ const Footer = () => {
           </h3>
 
           <ul className="space-y-4 text-sm">
-            <li>Social Research</li>
-            <li>Market Research</li>
-            <li>Business Consultancy</li>
-            <li>Branding & Advertisement</li>
-            <li>IT Solutions</li>
-            <li>Manpower Support</li>
+            <li>
+              <a
+                href="http://localhost:5173/services/social-research"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-yellow-500 transition"
+              >
+                Social Research
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="http://localhost:5173/services/market-research"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-yellow-500 transition"
+              >
+                Market Research
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="http://localhost:5173/services/business-consultancy"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-yellow-500 transition"
+              >
+                Business Consultancy
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="http://localhost:5173/services/branding-advertisement"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-yellow-500 transition"
+              >
+                Branding & Advertisement
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="http://localhost:5173/services/it-solutions"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-yellow-500 transition"
+              >
+                IT Solutions
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="http://localhost:5173/services/manpower-support"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-yellow-500 transition"
+              >
+                Manpower Support
+              </a>
+            </li>
           </ul>
         </div>
 
@@ -147,14 +207,16 @@ const Footer = () => {
             Terms of Service
           </Link>
 
-          {/* Admin icon at the corner */}
-          <Link
-            to="/admin/login"
+          <a
+            href="/admin/login"
+            target="_blank"
+            rel="noopener noreferrer"
             className="p-2 rounded-full bg-[#0f2a3a] text-white hover:bg-yellow-500 hover:text-[#0f2a3a] transition"
             aria-label="Admin login"
           >
             <UserRound size={18} />
-          </Link>
+          </a>
+
         </div>
       </div>
     </footer>

@@ -65,7 +65,7 @@ const CTASection = () => {
           strategy and technology solutions.
         </motion.p>
 
-        {/* Button with animated arrow + glow */}
+        {/* Button */}
         <motion.div
           initial={{ opacity: 0, y: 20, scale: 0.96 }}
           whileInView={{ opacity: 1, y: 0, scale: 1 }}
@@ -73,14 +73,16 @@ const CTASection = () => {
           transition={{ duration: 0.6, delay: 0.15 }}
           className="inline-block group relative"
         >
-          {/* glow behind button */}
+          {/* glow */}
           <div className="absolute -inset-0.5 rounded-xl bg-gradient-to-r from-amber-400 via-yellow-400 to-orange-400 opacity-60 blur-lg group-hover:opacity-90 transition-opacity duration-300" />
 
           <Button
             size="lg"
+            onClick={() => window.open("/contact", "_blank")}
             className="relative bg-gradient-to-r from-amber-400 to-yellow-400 hover:from-amber-500 hover:to-yellow-500 text-gray-900 font-bold px-9 py-5 text-base md:text-lg rounded-xl shadow-xl border-none flex items-center gap-2 overflow-hidden"
           >
             <span className="relative z-10">Get Started Today</span>
+
             <motion.span
               className="relative z-10 flex items-center justify-center w-7 h-7 rounded-full bg-gray-900/10"
               whileHover={{ x: 4 }}
@@ -88,7 +90,8 @@ const CTASection = () => {
             >
               <ArrowRight className="w-4 h-4" />
             </motion.span>
-            {/* subtle shine sweep */}
+
+            {/* shine effect */}
             <motion.span
               className="pointer-events-none absolute inset-0 bg-white/20"
               initial={{ x: '-100%', opacity: 0 }}

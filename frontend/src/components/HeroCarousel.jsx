@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { heroSlides } from '../mockData';
 import { Button } from './ui/button';
 
 const HeroCarousel = () => {
     const [currentSlide, setCurrentSlide] = useState(0);
+    const navigate = useNavigate();
 
     useEffect(() => {
         const timer = setInterval(() => {
@@ -18,6 +20,14 @@ const HeroCarousel = () => {
 
     const prevSlide = () => {
         setCurrentSlide((prev) => (prev - 1 + heroSlides.length) % heroSlides.length);
+    };
+
+    const handleLearnMore = () => {
+        navigate('/about');
+    };
+
+    const handleContactUs = () => {
+        window.open('/contact', '_blank', 'noopener,noreferrer');
     };
 
     return (
@@ -48,10 +58,14 @@ const HeroCarousel = () => {
                                 </h1>
                                 <p className="text-white/90 text-xl mb-8">{slide.subtitle}</p>
                                 <div className="flex space-x-4">
-                                    <Button className="bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-semibold px-8 py-3 rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-105">
+                                    <Button 
+                                        onClick={handleLearnMore}
+                                        className="bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-semibold px-8 py-3 rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-105"
+                                    >
                                         Learn More
                                     </Button>
                                     <Button
+                                        onClick={handleContactUs}
                                         variant="outline"
                                         className="border-2 border-white text-white hover:bg-white hover:text-gray-900 font-semibold px-8 py-3 rounded-lg transition-all duration-300"
                                     >

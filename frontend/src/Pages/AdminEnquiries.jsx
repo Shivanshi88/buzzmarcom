@@ -9,7 +9,6 @@ const AdminEnquiries = () => {
   const getAuthHeaders = () => {
     let token = localStorage.getItem('adminToken');
     if (token) {
-      // Sometimes tokens get saved with literal extra quotes, removing them
       token = token.replace(/^"(.*)"$/, '$1');
     }
     return token ? { Authorization: `Bearer ${token}` } : {};
@@ -103,16 +102,89 @@ const AdminEnquiries = () => {
     }
   };
 
+  // 🔹 NEW: Export enquiries to CSV and download
+  const handleExportCSV = () => {
+    if (!enquiries || enquiries.length === 0) {
+      alert('No enquiries to export');
+      return;
+    }
+
+    // Column headers
+    const headers = [
+      'Name',
+      'Email',
+      'Phone',
+      'Service',
+      'Message',
+      'Date',
+      'Time',
+      'Status',
+    ];
+
+    const rows = enquiries.map((e) => {
+      const dateObj = new Date(e.createdAt);
+      const date = dateObj.toLocaleDateString();
+      const time = dateObj.toLocaleTimeString();
+
+      const status = e.isRead ? 'Read' : 'New';
+
+      // CSV me comma / quote handle karne ke liye
+      const escape = (value) => {
+        if (value === null || value === undefined) return '';
+        const str = String(value).replace(/"/g, '""');
+        return `"${str}"`;
+      };
+
+      return [
+        escape(e.name),
+        escape(e.email),
+        escape(e.phone || ''),
+        escape(e.service || ''),      // agar tumne enquiry me service field rakha ho
+        escape(e.message),
+        escape(date),
+        escape(time),
+        escape(status),
+      ].join(',');
+    });
+
+    const csvContent = [headers.join(','), ...rows].join('\n');
+
+    const blob = new Blob([csvContent], {
+      type: 'text/csv;charset=utf-8;',
+    });
+    const url = URL.createObjectURL(blob);
+
+    const link = document.createElement('a');
+    link.href = url;
+    const timestamp = new Date().toISOString().split('T')[0];
+    link.download = `enquiries-${timestamp}.csv`;
+
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+
+    URL.revokeObjectURL(url);
+  };
+
   return (
     <section className="pt-28 pb-20 max-w-6xl mx-auto px-4">
       <div className="flex items-center justify-between mb-6">
         <h1 className="text-2xl font-bold">Admin: Enquiries</h1>
-        <button
-          onClick={fetchEnquiries}
-          className="px-3 py-1 text-xs rounded border border-gray-200 hover:bg-gray-50"
-        >
-          Refresh
-        </button>
+        <div className="flex gap-2">
+          <button
+            onClick={fetchEnquiries}
+            className="px-3 py-1 text-xs rounded border border-gray-200 hover:bg-gray-50"
+          >
+            Refresh
+          </button>
+          {/* 🔹 NEW: Export button */}
+          <button
+            onClick={handleExportCSV}
+            className="px-3 py-1 text-xs rounded border border-amber-300 bg-amber-50 text-amber-800 hover:bg-amber-100"
+          >
+            Export CSV
+          </button>
+        </div>
       </div>
 
       {loading && (

@@ -2,10 +2,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { services } from '../mockData';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
+import { CardDescription, CardTitle } from './ui/card';
 import { Button } from './ui/button';
 import { ArrowRight, Sparkles } from 'lucide-react';
-import { Link } from 'react-router-dom';
 
 const ServicesSection = () => {
   return (
@@ -85,7 +84,7 @@ const colorMap = {
   'Business Consultancy': 'from-orange-500 via-amber-500 to-yellow-400',
   'Branding & Advertisement': 'from-amber-500 via-orange-500 to-yellow-500',
   'IT Solutions': 'from-yellow-400 via-amber-400 to-orange-500',
-  'Manpower Support': 'from-yellow-300 via-amber-300 to-yellow-500', // yaha yellow zyada, orange kam
+  'Manpower Support': 'from-yellow-300 via-amber-300 to-yellow-500',
 };
 
 const ServiceCard = ({ service, index }) => {
@@ -136,7 +135,11 @@ const ServiceCard = ({ service, index }) => {
 
       {/* Button */}
       <div className="relative mt-6">
-        <Link to={service.path}>
+        <a
+          href={service.path}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <Button
             variant="ghost"
             className="w-full justify-between px-0 text-amber-600 hover:text-orange-600 hover:bg-transparent group/btn"
@@ -151,7 +154,7 @@ const ServiceCard = ({ service, index }) => {
               <ArrowRight className="w-3 h-3" />
             </motion.span>
           </Button>
-        </Link>
+        </a>
       </div>
     </motion.div>
   );
