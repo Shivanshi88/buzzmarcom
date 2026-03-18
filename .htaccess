@@ -1,0 +1,12 @@
+# Apache rewrite engine on
+RewriteEngine On
+
+# Hostinger ka existing rule – isko rehne do
+RewriteRule ^\.builds - [F,L]
+
+# SPA fallback – HAR internal route ko index.html pe bhejo
+RewriteBase /
+RewriteRule ^index\.html$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.html [L]

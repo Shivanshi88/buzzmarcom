@@ -98,69 +98,57 @@ const Footer = () => {
 
           <ul className="space-y-4 text-sm">
             <li>
-              <a
-                href="http://localhost:5173/services/social-research"
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                to="/services/social-research"
                 className="hover:text-yellow-500 transition"
               >
                 Social Research
-              </a>
+              </Link>
             </li>
 
             <li>
-              <a
-                href="http://localhost:5173/services/market-research"
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                to="/services/market-research"
                 className="hover:text-yellow-500 transition"
               >
                 Market Research
-              </a>
+              </Link>
             </li>
 
             <li>
-              <a
-                href="http://localhost:5173/services/business-consultancy"
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                to="/services/business-consultancy"
                 className="hover:text-yellow-500 transition"
               >
                 Business Consultancy
-              </a>
+              </Link>
             </li>
 
             <li>
-              <a
-                href="http://localhost:5173/services/branding-advertisement"
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                to="/services/branding-advertisement"
                 className="hover:text-yellow-500 transition"
               >
                 Branding & Advertisement
-              </a>
+              </Link>
             </li>
 
             <li>
-              <a
-                href="http://localhost:5173/services/it-solutions"
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                to="/services/it-solutions"
                 className="hover:text-yellow-500 transition"
               >
                 IT Solutions
-              </a>
+              </Link>
             </li>
 
             <li>
-              <a
-                href="http://localhost:5173/services/manpower-support"
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                to="/services/manpower-support"
                 className="hover:text-yellow-500 transition"
               >
                 Manpower Support
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
