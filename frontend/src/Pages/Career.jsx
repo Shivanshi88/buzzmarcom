@@ -10,21 +10,21 @@ const openings = [
     location: 'Remote / Patna / Delhi NCR',
     type: 'Full-time',
     summary:
-      'Support fieldwork, survey design, data analysis and reporting across social and market research projects.',
+      'Support fieldwork, survey design, data analysis, and reporting across social and market research projects.',
   },
   {
     title: 'Content & Communication Executive',
     location: 'Remote / Hybrid',
     type: 'Full-time',
     summary:
-      'Work on branding, campaign copy, reports and digital content for clients across sectors.',
+      'Work on branding, campaign copy, reports, and digital content for clients across sectors.',
   },
   {
     title: 'Project Coordinator – Manpower & Field Ops',
     location: 'On-site / Client locations',
     type: 'Contract / Project-based',
     summary:
-      'Coordinate field teams, timelines and quality checks for research and manpower deployments.',
+      'Coordinate field teams, timelines, and quality checks for research and manpower deployments.',
   },
 ];
 
@@ -69,8 +69,8 @@ const Career = () => {
             Join our growing team
           </h1>
           <p className="text-sm md:text-base text-gray-600 max-w-2xl mx-auto">
-            Research, strategy, content, tech ya operations — agar aapko problem‑solving aur
-            impact‑driven work pasand hai, Buzzmarcom me jagah hai.
+            Research, strategy, content, tech, or operations — if you enjoy problem-solving and
+            impact-driven work, there’s a place for you at Buzzmarcom.
           </p>
         </motion.div>
 
@@ -92,8 +92,8 @@ const Career = () => {
                   Didn’t find a perfect role?
                 </p>
                 <p className="text-xs text-gray-700">
-                  Hum hamesha strong generalists aur specialists se baat karne ke liye open hain.
-                  Apna profile bhejo, hum relevant opening ke time connect karenge.
+                  We are always open to connecting with strong generalists and specialists.
+                  Send us your profile, and we’ll reach out when a relevant opportunity comes up.
                 </p>
               </div>
             </div>
@@ -115,7 +115,9 @@ const Career = () => {
           </div>
         ) : jobs.length === 0 ? (
           <div className="text-center py-10 bg-gray-50 rounded-2xl border-2 border-dashed">
-             <p className="text-gray-500">No active job openings at the moment. Try sending your resume anyway!</p>
+            <p className="text-gray-500">
+              No active job openings at the moment. Feel free to send your resume anyway!
+            </p>
           </div>
         ) : (
           <motion.div
